@@ -16,7 +16,7 @@ html {
   --purple-color: #867bcf;
   --orange-color: #ff6401;
   --pink-color: #f3b3cf;
-  font-family: 'stratos', sans-serif;
+  font-family: "stratos", sans-serif;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'stratos', cursive;
+  font-family: "stratos", cursive;
   margin-bottom: 0.55rem;
   line-height: 1.5;
 }
@@ -128,11 +128,12 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   border: 0.01rem solid var(--grey-color);
+  height: 100vh;
 }
 
 .projects .projects__content {
   align-self: center;
-  padding: 40px;
+  padding: 10rem;
 }
 
 .projects .projects__content h2 {
@@ -142,6 +143,7 @@ h6 {
 }
 
 .projects .projects__content p {
+  font-family: stratos-lights, sans-serif;
   font-weight: 300;
 }
 
@@ -154,12 +156,14 @@ h6 {
   padding: 40px;
   text-align: center;
   border: 0.01rem solid var(--grey-color);
+  align-items: center;
 }
 
 .projects .projects__items .project__single .project__category {
   font-size: 14px;
   font-weight: 500;
   color: var(--purple-color);
+  text-transform: uppercase;
 }
 
 .projects .projects__items .project__single .project__title {
@@ -170,6 +174,8 @@ h6 {
 .projects .projects__items .project__single .project__description {
   font-size: 14px;
   margin-bottom: 30px;
+  font-family: stratos-lights, sans-serif;
+  font-weight: 300;
 }
 
 .projects .projects__items .project__single .project__button {
@@ -183,4 +189,81 @@ h6 {
   background-color: #ffffff;
   border: 1px solid #ffffff;
   color: var(--black-color);
+}
+
+/* Second section: experience */
+.experience {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 100vh;
+  background-color: var(--orange-color);
+}
+
+.experience .experience__content {
+  color: #ffffff;
+  grid-column: 1 / span 4;
+  padding-left: 10rem;
+  padding-right: 500px;
+  align-self: center;
+}
+
+.experience .experience__content h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.experience .experience__content .experience__item {
+  margin-bottom: 50px;
+}
+
+.experience .experience__content .experience__item h3 {
+  font-size: 19px;
+  margin-bottom: 0;
+}
+
+.experience .experience__content .experience__item .experience__year {
+  font-size: 19px;
+  margin-top: 0;
+}
+
+.experience .experience__content .experience__item .experience__description {
+  font-size: 18px;
+  font-family: stratos-lights, sans-serif;
+  font-weight: 300;
+}
+
+.experience .experience__content .experience__item .experience__button {
+  text-decoration: underline;
+}
+
+.experience .experience__images {
+  background-color: var(--pink-color);
+  display: grid;
+}
+
+.experience .experience__images img {
+  align-self: center;
+}
+
+.experience .experience__images img {
+  margin-left: -200px;
+  height: 500px;
+}
+
+.experience .experience__empty {
+  background-color: var(--pink-color);
+}
+
+/* Third section: courses */
+.courses {
+  background-color: var(--black-color);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.courses__title {
+  grid-column: 1 / span 2;
+  text-align: center;
+  border: 0.01rem solid var(--grey-color);
 }
