@@ -51,6 +51,14 @@ h6 {
   line-height: 1.5;
 }
 
+.top__heading {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--purple-color);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
 /* Navigation */
 .nav__main {
   background-color: var(--blue-color);
@@ -133,7 +141,7 @@ h6 {
 
 .projects .projects__content {
   align-self: center;
-  padding: 10rem;
+  padding: 5rem;
 }
 
 .projects .projects__content h2 {
@@ -157,13 +165,6 @@ h6 {
   text-align: center;
   border: 0.01rem solid var(--grey-color);
   align-items: center;
-}
-
-.projects .projects__items .project__single .project__category {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--purple-color);
-  text-transform: uppercase;
 }
 
 .projects .projects__items .project__single .project__title {
@@ -202,9 +203,10 @@ h6 {
 .experience .experience__content {
   color: #ffffff;
   grid-column: 1 / span 4;
-  padding-left: 10rem;
-  padding-right: 500px;
+  padding-left: 5rem;
+  padding-right: 20%;
   align-self: center;
+  z-index: 1;
 }
 
 .experience .experience__content h2 {
@@ -243,9 +245,6 @@ h6 {
 
 .experience .experience__images img {
   align-self: center;
-}
-
-.experience .experience__images img {
   margin-left: -200px;
   height: 500px;
 }
@@ -262,8 +261,62 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.courses h3 {
+  margin-top: 0;
+}
+
 .courses__title {
   grid-column: 1 / span 2;
   text-align: center;
   border: 0.01rem solid var(--grey-color);
+}
+
+.courses .courses__training {
+  display: grid;
+  justify-content: center;
+}
+
+.courses .courses__training .courses__training-single {
+  border: 0.01rem solid var(--grey-color);
+  padding: 5rem;
+}
+
+.courses .courses__course {
+  padding: 5rem;
+  border: 0.01rem solid var(--grey-color);
+}
+
+/* Fourth section: About */
+.about {
+  background-color: var(--yellow-color);
+  height: 100vh;
+  display: grid;
+  padding: 5rem;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+}
+
+.about .about__content {
+  position: absolute;
+  z-index: 2;
+  width: 70%;
+}
+
+.about .about__content h2 {
+  align-self: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.about .about__content p {
+  font-size: 28px;
+  font-family: stratos-lights, sans-serif;
+  font-weight: 300;
+}
+
+.about img {
+  position: relative;
+  z-index: 1;
+  grid-column: 4 / span 2;
+  opacity: 0.4;
 }
