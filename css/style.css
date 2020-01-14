@@ -38,6 +38,7 @@ ul {
 
 p {
   margin: 0.5rem 0;
+  font-family: stratos-lights, sans-serif;
 }
 
 h1,
@@ -59,197 +60,170 @@ h6 {
   margin-bottom: 0;
 }
 
+/* Overall styling */
+.strapline__purple {
+  color: var(--purple-color);
+  margin-bottom: 0px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.button__white {
+  padding: 6px 14px;
+  font-size: 13px;
+  border: 0.05rem solid #ffffff;
+  border-radius: 0.75rem;
+}
+
 /* Navigation */
 .nav__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: var(--blue-color);
   color: #ffffff;
-  font-family: "stratos", "sans-serif";
   padding: 20px 40px;
 }
 
-.nav__main p {
-  margin: 0;
+.nav__main-logo {
+  margin-top: 15px;
 }
 
-.nav__main .nav__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.nav__main .nav__container .nav__logo {
-  font-weight: 800;
-}
-
-.nav__main .nav__container .nav__items {
+.nav__main-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: end;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 /* First section: landing */
 .showcase {
-  background-color: var(--blue-color);
-  color: #ffffff;
-  height: 90vh;
-}
-
-.showcase__content {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 90vh;
+  background-color: var(--blue-color);
+  color: #ffffff;
+  text-align: center;
 }
 
-.showcase__content h1 {
-  color: var(--yellow-color);
+.showcase h1 {
   grid-column: 1 / span 6;
   font-size: 12rem;
-  text-align: center;
   font-weight: 300;
+  color: var(--yellow-color);
 }
 
-.showcase .showcase__content p {
+.showcase p,
+.showcase a {
   grid-column: 3 / span 2;
-  text-align: center;
-  align-self: end;
-  font-weight: 300;
 }
 
-.showcase .showcase__content a {
-  grid-column: 3 / span 2;
-  text-align: center;
-  align-self: end;
-  margin-bottom: 30px;
-}
-
-.showcase .showcase__content a::after {
+.showcase a:after {
   content: "→";
-  margin-left: 5px;
+  margin-left: 0.4rem;
 }
 
 /* Second section: projects */
-.projects {
-  background-color: var(--black-color);
-  color: #ffffff;
+.project {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  background-color: var(--black-color);
+  color: #ffffff;
   border: 0.01rem solid var(--grey-color);
-  height: 100vh;
 }
 
-.projects .projects__content {
-  align-self: center;
+.project__content {
   padding: 5rem;
-}
-
-.projects .projects__content h2 {
   align-self: center;
-  font-size: 24px;
+}
+
+.project__content h2 {
   margin-bottom: 40px;
+  font-size: 24px;
 }
 
-.projects .projects__content p {
-  font-family: stratos-lights, sans-serif;
-  font-weight: 300;
-}
-
-.projects .projects__items {
+.project__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.projects .projects__items .project__single {
+.project__item-single {
+  align-items: center;
   padding: 40px;
   text-align: center;
   border: 0.01rem solid var(--grey-color);
-  align-items: center;
 }
 
-.projects .projects__items .project__single .project__title {
+.project__item-single h3 {
   font-size: 19px;
   margin-top: 0px;
 }
 
-.projects .projects__items .project__single .project__description {
+.project__item-single p {
   font-size: 14px;
   margin-bottom: 30px;
-  font-family: stratos-lights, sans-serif;
-  font-weight: 300;
-}
-
-.projects .projects__items .project__single .project__button {
-  font-size: 13px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  padding: 6px 14px;
-}
-
-.projects .projects__items .project__single .project__button:hover {
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  color: var(--black-color);
 }
 
 /* Second section: experience */
 .experience {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  height: 100vh;
   background-color: var(--orange-color);
-}
-
-.experience .experience__content {
   color: #ffffff;
-  grid-column: 1 / span 4;
-  padding-left: 5rem;
-  padding-right: 20%;
-  align-self: center;
-  z-index: 1;
 }
 
-.experience .experience__content h2 {
+.experience__content {
+  grid-column: 1 / span 4;
+  padding: 5rem;
+  align-self: center;
+}
+
+.experience__content h2 {
   font-size: 24px;
   margin-bottom: 40px;
 }
 
-.experience .experience__content .experience__item {
-  margin-bottom: 50px;
-}
-
-.experience .experience__content .experience__item h3 {
-  font-size: 19px;
+.experience__content h3 {
   margin-bottom: 0;
-}
-
-.experience .experience__content .experience__item .experience__year {
   font-size: 19px;
-  margin-top: 0;
+  font-weight: 500;
 }
 
-.experience .experience__content .experience__item .experience__description {
-  font-size: 18px;
-  font-family: stratos-lights, sans-serif;
+.experience__content h4 {
+  margin-top: 0;
+  font-size: 19px;
   font-weight: 300;
 }
 
-.experience .experience__content .experience__item .experience__button {
+.experience__content p {
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.experience__content a {
+  font-weight: 300;
   text-decoration: underline;
 }
 
-.experience .experience__images {
-  background-color: var(--pink-color);
+.experience__content a::after {
+  content: "→";
+  margin-left: 0.4rem;
+  text-decoration: none; /* Waarom werkt dit niet */
+}
+
+.experience__image {
   display: grid;
+  background-color: var(--pink-color);
+  align-items: center;
+  margin-left: 12rem;
 }
 
-.experience .experience__images img {
-  align-self: center;
-  margin-left: -200px;
-  height: 500px;
+.experience__image img {
+  margin-left: -12.5rem;
+  height: 31.25rem;
 }
 
-.experience .experience__empty {
+.experience__empty-container {
   background-color: var(--pink-color);
 }
 
