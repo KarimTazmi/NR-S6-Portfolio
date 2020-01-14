@@ -34,6 +34,7 @@ a {
 
 ul {
   list-style: none;
+  font-family: stratos-lights, sans-serif;
 }
 
 p {
@@ -66,6 +67,7 @@ h6 {
   margin-bottom: 0px;
   font-weight: 300;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .button__white {
@@ -75,6 +77,12 @@ h6 {
   border-radius: 0.75rem;
 }
 
+.button__white:hover {
+  background-color: #ffffff;
+  color: var(--black-color);
+  border: 0.05rem solid #ffffff;
+}
+
 /* Navigation */
 .nav__main {
   display: grid;
@@ -82,6 +90,15 @@ h6 {
   background-color: var(--blue-color);
   color: #ffffff;
   padding: 20px 40px;
+  font-weight: 300;
+}
+
+.nav__main a:hover {
+  border-bottom: 0.06rem solid #ffffff;
+}
+
+.nav__main a:hover::after {
+  content: " →";
 }
 
 .nav__main-logo {
@@ -116,9 +133,8 @@ h6 {
   grid-column: 3 / span 2;
 }
 
-.showcase a:after {
-  content: "→";
-  margin-left: 0.4rem;
+.showcase__button:hover:after {
+  content: " →";
 }
 
 /* Second section: projects */
@@ -151,6 +167,10 @@ h6 {
   padding: 40px;
   text-align: center;
   border: 0.01rem solid var(--grey-color);
+}
+
+.project__item-single:hover {
+  background-image: url(https://picsum.photos/500);
 }
 
 .project__item-single h3 {
@@ -228,69 +248,68 @@ h6 {
 }
 
 /* Third section: courses */
-.courses {
-  background-color: var(--black-color);
-  color: #ffffff;
+.education {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--black-color);
+  color: #ffffff;
 }
 
-.courses h3 {
+.education h3 {
   margin-top: 0;
 }
 
-.courses__title {
+.education__title-main {
   grid-column: 1 / span 2;
   text-align: center;
   border: 0.01rem solid var(--grey-color);
 }
 
-.courses .courses__training {
+.education__training {
   display: grid;
-  justify-content: center;
+  align-items: center;
 }
 
-.courses .courses__training .courses__training-single {
-  border: 0.01rem solid var(--grey-color);
+.education__training-single {
   padding: 5rem;
+  height: 100%;
+  border: 0.01rem solid var(--grey-color);
 }
 
-.courses .courses__course {
+.education__course {
   padding: 5rem;
   border: 0.01rem solid var(--grey-color);
 }
 
 /* Fourth section: About */
 .about {
-  background-color: var(--yellow-color);
-  height: 100vh;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 5rem;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
+  height: 100vh;
+  background-color: var(--yellow-color);
+  align-items: center;
 }
 
-.about .about__content {
+.about__content {
   position: absolute;
   z-index: 2;
   width: 70%;
 }
 
-.about .about__content h2 {
-  align-self: center;
-  font-size: 24px;
+.about h2 {
   margin-bottom: 40px;
+  font-size: 28px;
 }
 
-.about .about__content p {
+.about p {
   font-size: 28px;
-  font-family: stratos-lights, sans-serif;
   font-weight: 300;
 }
 
 .about img {
   position: relative;
+  grid-column: 2 / span 3;
   z-index: 1;
-  grid-column: 4 / span 2;
   opacity: 0.4;
 }
