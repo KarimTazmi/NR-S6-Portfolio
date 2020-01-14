@@ -20,6 +20,7 @@ html {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
+  scroll-behavior: smooth;
 }
 
 body {
@@ -111,6 +112,11 @@ h6 {
   justify-items: end;
 }
 
+.nav__main-logo,
+.nav__main-items {
+  animation: fadein 1s;
+}
+
 /* First section: landing */
 .showcase {
   display: grid;
@@ -126,11 +132,13 @@ h6 {
   font-size: 12rem;
   font-weight: 300;
   color: var(--yellow-color);
+  animation: fadein 2s;
 }
 
 .showcase p,
 .showcase a {
   grid-column: 3 / span 2;
+  animation: fadein 2.5s;
 }
 
 .showcase__button:hover:after {
@@ -241,6 +249,7 @@ h6 {
 .experience__image img {
   margin-left: -12.5rem;
   height: 31.25rem;
+  box-shadow: 0px 0px 10px 0px var(--grey-color);
 }
 
 .experience__empty-container {
@@ -309,7 +318,74 @@ h6 {
 
 .about img {
   position: relative;
-  grid-column: 2 / span 3;
+  grid-column: 3 / span 2;
   z-index: 1;
   opacity: 0.4;
+}
+
+/* Fifth section: Contact */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  background-color: var(--blue-color);
+  color: #ffffff;
+}
+
+.contact h2::after {
+  content: " 👋";
+}
+
+.contact a {
+  border-bottom: 0.06rem solid #ffffff;
+}
+
+.contact a:hover::after {
+  content: " →";
+}
+
+.contact img {
+  grid-column: 2 / span 1;
+  height: 100%;
+}
+
+.contact__content {
+  grid-column: 1 / span 1;
+  align-self: center;
+  padding: 5rem;
+}
+
+/*Footer */
+footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--black-color);
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.footer__logo {
+  grid-column: 1 / span 1;
+  text-align: left;
+}
+
+.footer__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2 / span 2;
+}
+
+footer p {
+  grid-column: 6 / span 1;
+  text-align: right;
+}
+
+/* Animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
