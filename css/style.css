@@ -152,7 +152,8 @@ h6 {
   grid-gap: 2rem;
   background-color: var(--black-color);
   color: #ffffff;
-  border: 0.01rem solid var(--grey-color);
+  border-top: 0.01rem solid var(--grey-color);
+  border-bottom: 0.01rem solid var(--grey-color);
 }
 
 .project__content {
@@ -166,15 +167,19 @@ h6 {
 }
 
 .project__item {
+  background-color: var(--grey-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  border-left: 1px solid var(--grey-color);
+  border-bottom: 1px solid var(--grey-color);
 }
 
 .project__item-single {
+  background-color: var(--black-color);
   align-items: center;
   padding: 40px;
   text-align: center;
-  border: 0.01rem solid var(--grey-color);
 }
 
 .project__item-single:hover {
