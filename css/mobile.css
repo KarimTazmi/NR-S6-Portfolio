@@ -38,14 +38,29 @@
   height: 100%;
 }
 
+.project__content {
+  padding: 2rem;
+}
+
+.project__items {
+  grid-template-columns: 1fr;
+  min-height: 100%;
+}
+
+.project__item {
+  text-align: left;
+  padding: 2rem;
+  align-items: start;
+}
+
 /* Second section: experience */
 .experience {
   display: block;
 }
 
 .experience__content {
-    padding: 2rem;
-  }
+  padding: 2rem;
+}
 
 .experience__image {
   display: block;
@@ -70,12 +85,12 @@
 }
 
 .education__training-single {
-    padding: 2rem;
-  }
+  padding: 2rem;
+}
 
-  .education__course {
-    padding: 2rem;
-  }
+.education__course {
+  padding: 2rem;
+}
 
 /* Fourth section: About */
 .about {
@@ -110,5 +125,5 @@
 }
 
 .contact__content {
-    padding: 2rem;
-  }
+  padding: 2rem;
+}
