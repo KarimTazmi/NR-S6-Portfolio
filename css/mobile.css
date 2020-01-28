@@ -1,0 +1,114 @@
+/* Navigation */
+.nav__main {
+  grid-template-columns: 1fr;
+}
+
+.nav__main-items {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: left;
+  padding-inline-start: 0;
+}
+
+/* First section: landing */
+.showcase {
+  grid-template-columns: 1fr;
+  height: 100%;
+  padding: 1rem;
+}
+
+.showcase h1 {
+  grid-column: 1;
+  font-size: 7rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.showcase a {
+  margin-bottom: 4rem;
+}
+
+.showcase p,
+.showcase a {
+  grid-column: 1;
+}
+
+/* Second section: projects */
+.project {
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+/* Second section: experience */
+.experience {
+  display: block;
+}
+
+.experience__content {
+    padding: 2rem;
+  }
+
+.experience__image {
+  display: block;
+  background-color: var(--pink-color);
+  margin-left: auto;
+}
+
+.experience__image img {
+  margin-left: 0;
+  height: 100%;
+  width: 100vw;
+  box-shadow: none;
+}
+
+/* Third section: courses */
+.education {
+  grid-template-columns: 1fr;
+}
+
+.education__title-main {
+  grid-column: 1;
+}
+
+.education__training-single {
+    padding: 2rem;
+  }
+
+  .education__course {
+    padding: 2rem;
+  }
+
+/* Fourth section: About */
+.about {
+  grid-template-columns: 1fr;
+  height: 100%;
+  padding: 2rem;
+}
+
+.about__content {
+  position: inherit;
+  z-index: 2;
+  width: 100%;
+}
+
+.about p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.about img {
+  display: none;
+}
+
+/* Fifth section: Contact */
+.contact {
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+.contact img {
+  display: none;
+}
+
+.contact__content {
+    padding: 2rem;
+  }
